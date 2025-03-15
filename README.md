@@ -81,10 +81,13 @@
 graph LR;
 %% Подготовка нового файла к коммиту
   untracked -- "git add" --> staged;
+  
 %% Коммит
   staged -- "git commit" --> tracked/comitted;
+  
 %% Изменение
   tracked -- "изменение отслеживаемого файла" --> modified;
+  
 %% Подготовка изменённого файла к коммиту
-  modified -- "git add" --> staged.
+  modified -- "git add" --> staged;
 ```
